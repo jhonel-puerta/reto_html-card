@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root{
+
+    /*primary*/
+    --Dark_cyan: hsl(185, 75%, 39%);
+    --Very_dark_desaturated_blue: hsl(229, 23%, 23%);
+    --Dark_grayish_blue: hsl(227, 10%, 46%);
+
+    /*neutral*/
+    --Dark_gray: hsl(0, 0%, 59%);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--Dark_cyan);
+    background-image: url(images/bg-pattern-top.svg),url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: left -26vw top -90vh,right -25vw bottom -90vh;
+}
+#card{
+    overflow: hidden ;
+    width: 25%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.card-body{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txt1{
+    color: var(--Very_dark_desaturated_blue);
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.card-body span{
+    color: var(--Dark_grayish_blue);
+}
+.card-body p{
+    color: var(--Dark_grayish_blue);
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+#image-user{
+    border-radius: 50%;
+    border: solid white 5px;
+    margin-top: -50px;
+}
+
+.card-footer{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    border-top: solid var(--Dark_gray) 0.5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.card-footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-footer div h2{
+    font-size: 18px;
+    color: var(--Very_dark_desaturated_blue);
+    font-weight: 700;
+}
+.card-footer div p{
+    color: var(--Dark_grayish_blue);
+    font-size: 10px;
+}
+
+@media (min-width:430px) and (max-width:640px){
+    #card{
+        width: 50%;
+    }
+}
+
+@media (max-width:430px){
+    #card{
+        width: 80%;
+    }
+}
